@@ -63,7 +63,7 @@ def check_server_status(server_name: str) -> str:
     online_servers = ["prod-1", "prod-2", "staging-1"]
     name = server_name.strip()
     if name not in online_servers:
-        raise ConnectionError(f"Server '{name}' is unreachable or does not exist")
+        return f"Server '{name}' is unreachable or does not exist"
     return f"Server {name} is ONLINE and healthy"
 
 # ─── Simple Agent Function ─────────────────────────────────────────────────────
